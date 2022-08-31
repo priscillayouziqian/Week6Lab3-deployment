@@ -49,7 +49,7 @@ h3{
 }
 
 .img-box{
-    background-image: url(/animal-crossing.jpg);
+    background-image: url(/public/animal-crossing.jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
