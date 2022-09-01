@@ -16,23 +16,14 @@ rollbar.log('Hello world!')
 
 app.use('/', express.static(path.join(__dirname, '../client')));
 
-try {
-    nonExistentFunction();
-  } catch (error) {
-    console.error(error);
-    // expected output: ReferenceError: nonExistentFunction is not defined
-    // Note - error messages will vary depending on browser
-  }
+//student data
+const students = [ 'jimmy', 'timothy', 'jimothy']
 
-// app.use('/js', express.static(path.join(__dirname, 'public/main.js')))
+app.get('/', function(req, res){
+    rollbar.info('some users want to get list of students on page load')
+    res.status(200).send(students)
+})
 
-// app.get('/', function(req, res) {
-//     res.sendFile(path.join(__dirname, '../index.html'));
-// });
-
-// app.get('/css', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/style.css'))
-//   });
   
 
 
